@@ -1,0 +1,36 @@
+// Select button and output div
+const promiseButton = document.getElementById("promiseBtn");
+const promiseOutput = document.getElementById("promiseOutput");
+
+// Function to fetch data using a Promise
+function fetchPosts() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      fetch("https://dummyjson.com/posts")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => resolve(data.posts))
+        .catch((error) => reject("Failed to fetch data: " + error.message));
+    }, 5000); // Simulated delay
+  });
+}
+
+// Add event listener for the button
+promiseButton.addEventListener("click", () => {
+  promiseOutput.textContent = "Loading...";
+  fetchPosts()
+    .then((posts) => {
+      // Display fetched posts
+      promiseOutput.innerHTML = posts
+        .map((post) => `<p>${post.title}</p>`)
+        .join("");
+    })
+    .catch((error) => {
+      // Display error message
+      promiseOutput.textContent = error;
+    });
+});

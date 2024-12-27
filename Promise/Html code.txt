@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promises</title>
+  <style>
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f5deb3; 
+    }
+
+    /* Section styling */
+    .Promise {
+      background-color: #add8e6; 
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button styling */
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #007BFF; 
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Button hover effect */
+    button:hover {
+      background-color: #0056b3; 
+      transform: scale(1.05);
+    }
+
+    
+    #promiseOutput {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="Promise">
+    <h1>Promises</h1>
+    <button id="promiseBtn">Fetch Posts</button>
+    <div id="promiseOutput">Click the button to fetch posts using Promises.</div>
+  </div>
+  
+  <script src="promise.js"></script>
+</body>
+</html>

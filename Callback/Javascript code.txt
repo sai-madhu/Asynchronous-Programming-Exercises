@@ -1,0 +1,36 @@
+// Select button and output div
+const button = document.getElementById("callbackBtn");
+const output = document.getElementById("callbackOutput");
+
+// Function to simulate delay
+function simulateDelay(callback) {
+  setTimeout(() => {
+    callback();
+  }, 5000); // 5 seconds delay
+}
+
+// Add event listener
+button.addEventListener("click", () => {
+  output.textContent = "Please wait...";
+  simulateDelay(() => {
+    output.textContent = "Callback executed after 5 seconds";
+  });
+});
+
+function fetchData(callback) {
+    setTimeout(() => {
+      fetch("https://dummyjson.com/posts")
+        .then((response) => response.json())
+        .then((data) => {
+          callback(data.posts);
+        });
+    }, 5000); // Simulate delay
+  }
+  
+  button.addEventListener("click", () => {
+    output.textContent = "Fetching data...";
+    fetchData((posts) => {
+      output.innerHTML = posts.map((post) => `<p>${post.title}</p>`).join("");
+    });
+  });
+  

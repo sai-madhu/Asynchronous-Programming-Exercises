@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callbacks</title>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #d1e7f5; 
+    }
+
+    
+    .Callback {
+      background-color: #c6f618; 
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 10px; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover{
+        background-color: #275a29;
+        transform: scale(1.05);
+    }
+
+
+    div {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="Callback">
+    <h1>Callbacks</h1>
+    <button id="callbackBtn">Click Me</button>
+    <div id="callbackOutput"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
