@@ -54,6 +54,6 @@
     <div id="asyncOutput">Click the button to fetch posts using Async/Await.</div>
   </div>
 
-  <script src="async-await.js"></script>
+  <script src="Javascript code.js"></script>
 </body>
 </html>
