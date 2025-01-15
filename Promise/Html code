@@ -57,6 +57,6 @@
     <div id="promiseOutput">Click the button to fetch posts using Promises.</div>
   </div>
   
-  <script src="promise.js"></script>
+  <script src="Javascript code.js"></script>
 </body>
 </html>
